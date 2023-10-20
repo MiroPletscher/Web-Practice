@@ -1,0 +1,154 @@
+/*
+Desktop: > 800px
+Tablet: > 500px, < 800px
+Mobile: < 500px
+*/
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+button{
+    font-family: Inter, Arial;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+html{
+    height: 100vh;
+}
+
+body{
+    margin: 65px 120px 120px 120px;
+    min-height: calc(100vh - 185px);
+    display: grid;
+    grid-template-rows: 30px auto;
+    background: hsl(36, 100%, 99%);
+    gap: 40px;
+    font-family: Inter, Arial;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > img{
+    height: 100%;
+}
+
+header > div{
+    display: flex;
+    gap: 30px;
+}
+
+header > div > a{
+    text-decoration: none;
+    color: hsl(236, 13%, 42%);
+    transition: opacity 0.2s;
+    font-size: 15px;
+}
+
+header > div > a:hover{
+    opacity: 0.5;
+}
+
+p{
+    color: hsl(236, 13%, 42%);
+    font-size: 15px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 100px;
+    gap: 20px;
+    grid-row-gap: 50px;
+}
+
+.grid > div{
+    outline: 1px solid red;
+}
+
+.featured{
+    grid-column: span 2;
+    display: grid;
+    gap: 20px;
+}
+
+.featured > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.featured h1{
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 42px;
+    margin-bottom: 10px;
+}
+
+.featured > div > div{
+    position: relative;
+}
+
+.featured p{
+    margin-bottom: 50px;
+}
+
+.featured button{
+    padding: 12px 25px;
+    border: none;
+    background: hsl(5, 85%, 63%);
+    transition: background, scale;
+    transition-duration: 0.2s;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.featured button:hover{
+    background: hsl(240, 100%, 5%);
+}
+
+.new{
+    background: hsl(240, 100%, 5%);
+    padding: 20px;
+}
+
+.new h1{
+    color: hsl(35, 77%, 62%);
+}
+
+.new h4{
+    color: hsl(36, 100%, 99%);
+    margin-bottom: 10px;
+}
+
+.new-news-element{
+    padding: 20px 0;
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+
+.new-news-element:nth-child(4){
+    border-bottom: none;
+}

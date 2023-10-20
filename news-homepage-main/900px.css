@@ -1,0 +1,13 @@
+@media screen and (max-width: 900px) {
+    body{
+        margin: 50px 80px;
+    }
+
+    .new-news-element:nth-child(4){
+        display: none;
+    }
+
+    .new-news-element:nth-child(3){
+        border-bottom: none;
+    }
+}
