@@ -26,12 +26,12 @@ html{
 }
 
 body{
-    margin: 65px 120px 120px 120px;
-    min-height: calc(100vh - 185px);
+    margin: 4rem 7.5rem 7.5rem 7.5rem;
+    max-height: calc(100vh - 185px);
     display: grid;
     grid-template-rows: 30px auto;
     background: hsl(36, 100%, 99%);
-    gap: 40px;
+    gap: 3rem;
     font-family: Inter, Arial;
 }
 
@@ -58,34 +58,37 @@ header > div > a{
     text-decoration: none;
     color: hsl(236, 13%, 42%);
     transition: opacity 0.2s;
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 header > div > a:hover{
     opacity: 0.5;
 }
 
+.mobile-header-img{
+    display: none;
+    height: 70%;
+}
+
 p{
     color: hsl(236, 13%, 42%);
-    font-size: 15px;
+    font-size: 0.7rem;
+    line-height: 1.2rem;
 }
 
 .grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto 100px;
-    gap: 20px;
-    grid-row-gap: 50px;
-}
-
-.grid > div{
-    outline: 1px solid red;
+    gap: 1.5rem;
+    grid-row-gap: 3rem;
+    max-height: 100%;
 }
 
 .featured{
     grid-column: span 2;
     display: grid;
-    gap: 20px;
+    gap: 1rempx;
 }
 
 .featured > div{
@@ -98,15 +101,10 @@ p{
     font-weight: 800;
     font-size: 40px;
     line-height: 42px;
-    margin-bottom: 10px;
 }
 
 .featured > div > div{
     position: relative;
-}
-
-.featured p{
-    margin-bottom: 50px;
 }
 
 .featured button{
@@ -133,15 +131,25 @@ p{
 .new{
     background: hsl(240, 100%, 5%);
     padding: 20px;
+    max-height: 100%;
 }
 
 .new h1{
     color: hsl(35, 77%, 62%);
 }
 
-.new h4{
+.new > div{
+}
+
+.new h5{
     color: hsl(36, 100%, 99%);
     margin-bottom: 10px;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.new h5:hover{
+    color: hsl(35, 77%, 62%);
 }
 
 .new-news-element{
@@ -149,6 +157,33 @@ p{
     border-bottom: 1px solid hsl(236, 13%, 42%);
 }
 
-.new-news-element:nth-child(4){
+.new-news-element:nth-child(3){
     border-bottom: none;
+    padding-bottom: 0;
+}
+
+.card{
+    display: flex;
+    gap: 1rem;
+}
+
+.card img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.card h2{
+    color: hsl(233, 8%, 79%);
+    margin-bottom: 0.5rem;
+}
+
+.card h5{
+    color: hsl(240, 100%, 5%);
+    margin-bottom: 0.5rem;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.card h5:hover{
+    color: hsl(5, 85%, 63%);
 }
